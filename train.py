@@ -26,7 +26,6 @@ encoder = Conv2D(256, (3,3), activation='relu', padding='same', strides=2)(encod
 encoder = Conv2D(512, (3,3), activation='relu', padding='same')(encoder)
 encoder = Conv2D(256, (3,3), activation='relu', padding='same')(encoder) 
 
-
 # Classifier
 classifier_input = Input(shape=(configs.IMG_HEIGHT, configs.IMG_WIDTH, 1,))
 classifier = Conv2D(64, (3,3), activation='relu', padding='same', strides=2)(classifier_input)

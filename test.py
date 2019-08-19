@@ -1,4 +1,3 @@
-# Tensorflow
 import tensorflow as tf
 import keras.backend as K
 import os
@@ -28,7 +27,7 @@ for r, d, f in os.walk(configs.PATH_TEST_DATASET):
             if '.jpg' in file:
                 file_names.append(file)
                 images.append(img_to_array(load_img(os.path.join(r, file), target_size=(configs.IMG_WIDTH, configs.IMG_HEIGHT))))
-                # img = cv2.imread(PATH_DATASET+filename)
+                # img = cv2.imread(os.path.join(r, file))
                 # shapes.append(img.shape)
 
 images = np.array(images, dtype=float)
