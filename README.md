@@ -1,2 +1,2 @@
 # NaturalImageColorization
-Natural images automatic colorization using deep neuron network 
+Natural image automatic colorization using deep neur network 
