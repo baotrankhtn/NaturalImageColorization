@@ -1,18 +1,12 @@
 # Introduction
-Natural image automatic colorization using deep neural network!. This model architecture is based on the model of Satoshi Iizuka, Edgar Simo-Serra and Hiroshi Ishikawa in the paper [Let there be Color!: Joint End-to-end Learning of Global and Local Image Priors for Automatic Image Colorization with Simultaneous Classification](http://iizuka.cs.tsukuba.ac.jp/projects/colorization/en/) with **2 big modifications: Add edge detection network and change loss function**
+Natural image automatic colorization using deep neural network! This model architecture is based on the model of Satoshi Iizuka, Edgar Simo-Serra and Hiroshi Ishikawa in the paper [Let there be Color!: Joint End-to-end Learning of Global and Local Image Priors for Automatic Image Colorization with Simultaneous Classification](http://iizuka.cs.tsukuba.ac.jp/projects/colorization/en/) with **2 big modifications: Add edge detection network and change loss function**
 
-CIELab colorspace is used. 
-
-Input: L channel
-
-Output: a and b
+About 200,000 natural images from Places2 dataset are used to train the network and about 20,000 to validate. We use CIELab colorspace, the input is L (grayscale images) and the output is ab
 
 Framework: Keras
 
-About 200,000 natural images from Places2 dataset are used to train the network and about 20,000 to validate
-
 # Architecture
-There are four component: Local features network (LFN), Classification network (CN), Edge detection network (EDN) and Colorization network. LFN, CN and EDN combine at Fussion layer 
+There are four components: Local features network (LFN), Classification network (CN), Edge detection network (EDN) and Colorization network. LFN, CN and EDN combine at Fussion layer 
 
 <img src="https://user-images.githubusercontent.com/18632073/63316953-21db0780-c33b-11e9-9ca3-f6133ae01621.png" width="600">
 
