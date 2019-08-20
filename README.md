@@ -6,6 +6,8 @@ Lab colorspace is used.
 Input: L channel
 Output: a and b
 
+Framework: Keras
+
 # Architecture
 There are four component: Local features network (LFN), Classification network (CN), Edge detection network (EDN) and Colorization network. LFN, CN and EDN combine at Fussion layer 
 
@@ -20,9 +22,19 @@ We have do experiments with T = 1 (no adjustment), T = 1.4, T = 1.6, T = 1.8, T 
 ![](https://user-images.githubusercontent.com/18632073/63317796-5f8d5f80-c33e-11e9-9b75-69b17e79e03e.png)
 
 # Result
+![](https://user-images.githubusercontent.com/18632073/63317927-e6423c80-c33e-11e9-8973-558379f31bd2.png)
 
-
-# Compare with the model of Richard Zhang and Satoshi Iizuka
+# Compare with the models of Richard Zhang and Satoshi Iizuka
 
 
 # Project struture
+train.py
+
+test.py
+
+configs.py: Path to dataset and saved models
+
+utils.py: convert RGB to grayscale,...
+
+# A try on ink wash painting
+![](https://user-images.githubusercontent.com/18632073/63318188-dc6d0900-c33f-11e9-99e9-9c6c0c0f2ece.png)
