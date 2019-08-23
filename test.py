@@ -9,6 +9,7 @@ from skimage.color import rgb2lab, lab2rgb, rgb2gray, xyz2lab
 from skimage.io import imsave, imread, imshow
 from skimage.feature import canny
 import cv2
+import time
 
 # Helper libraries
 import numpy as np
@@ -44,8 +45,10 @@ edges = edges.reshape(edges.shape + (-1,))
 images_l = images_l.reshape(images_l.shape + (-1,))
 
 # Test model
+start_time = time.time()
 output = model.predict([images_l, images_l, edges])
 output = output * 128
+print("\n===> Time to go through model: %s" % (time.time() - start_time))
 
 # Output colorizations
 for i in range(len(output)):
