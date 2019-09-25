@@ -6,14 +6,14 @@ About 200,000 natural images from Places2 dataset are used to train the network 
 Framework: Keras
 
 # Architecture
-There are four components: Local features network (LFN), Classification network (CN), Edge detection network (EDN) and Colorization network. LFN, CN and EDN combine at Fussion layer 
+There are four components: Local features network (LFN), Classification network (CN), Edge detection network (EDN) and Colorization network. LFN, CN and EDN combine at Fusion layer 
 
 <img src="https://user-images.githubusercontent.com/18632073/63316953-21db0780-c33b-11e9-9ca3-f6133ae01621.png" width="600">
 
 # Loss function
 To make the output more saturated, we first convert images to HSV then increase S with S' = T.S (T is a constant) then convert back to Lab. With **T = 1.8**, the model provides good result. Ours loss function is based on MSE, but instead of using Y (a, b from ground truth), we use K (a, b after adjusting saturation). So the final loss function:
 
-<img src="https://user-images.githubusercontent.com/18632073/63317572-8bf4ac00-c33d-11e9-86e1-5210124938af.png" width="200">
+<img src="https://user-images.githubusercontent.com/18632073/65568098-bbbd5200-df82-11e9-9349-d32e8bcbcf8e.png" width="200">
 
 We have do experiments with T = 1 (no adjustment), T = 1.4, T = 1.6, T = 1.8, T = 2
 <img src="https://user-images.githubusercontent.com/18632073/63317796-5f8d5f80-c33e-11e9-9b75-69b17e79e03e.png" width="600">
