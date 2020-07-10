@@ -1,4 +1,6 @@
 # Introduction
+Paper: https://link.springer.com/chapter/10.1007%2F978-3-030-41964-6_53
+
 Natural image automatic colorization using deep neural network! This model architecture is based on the model of Satoshi Iizuka, Edgar Simo-Serra and Hiroshi Ishikawa in the paper [Let there be Color!: Joint End-to-end Learning of Global and Local Image Priors for Automatic Image Colorization with Simultaneous Classification](http://iizuka.cs.tsukuba.ac.jp/projects/colorization/en/) with **2 big modifications: Adding edge detection network and changing loss function**
 
 About 200,000 natural images from Places2 dataset are used to train the network and about 20,000 to validate. We use CIELab colorspace, the input is L (grayscale images) and the output is ab
